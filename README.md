@@ -6,7 +6,7 @@ Atividades
 
 * 1. Responsividade do Dashboard de Skills
     
-    Arrumar o layout dos cards de forma responsiva, para exibir em telas com breakpoint lg ou maiores com 3 cards, breakpoint md com 2 cards, e menores que md com 1.
+    Ajustar o layout dos cards de forma responsiva, para exibir em telas com breakpoint lg ou maiores com 3 cards por linha, breakpoint md com 2 cards por linha, e menores que md com 1 card por linha.
     Referência dos breakpoints: https://github.com/angular/flex-layout/wiki/Responsive-API.
 
 * 2. Funcionalidades do Card
