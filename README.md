@@ -23,4 +23,4 @@ Atividades
 * 3. Design
 
     Essa tela está bem sem graça não? Bom, ta aí a chance de você mostrar seus dotes artísticos !
-    Afinal, queremos encantar nossos clientes com a apresentação dessas skills, portanto seja criativo, e fique a vontade para adicionar animações, cores, bordas, enfim, o que achar melhor para que essa tela fique mais apresentável.
+    Afinal, queremos encantar nossos clientes com a apresentação dessas skills, portanto seja criativo, e fique a vontade para adicionar animações, cores, bordas, enfim, o que achar melhor para que essa tela fique mais a sua cara.
