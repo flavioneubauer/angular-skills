@@ -1,0 +1,25 @@
+div {
+  display: grid;
+  align-items: center;
+}
+
+app-card{
+  padding: 0px 40px 20px 40px;
+}
+
+/* For each type of layout we display the skills in different ways
+   If the window size is lg display 3 skills side by side
+   If the window size is md display 2 skills side by side
+   If the window size is sm display only 1 skill in each row
+*/
+div.layout-lg{
+ grid-template-columns: repeat(3, 2fr);
+}
+
+div.layout-md{
+  grid-template-columns: repeat(2, 2fr);
+}
+
+div.layout-sm{
+  grid-template-columns: repeat(1, 2fr);
+}

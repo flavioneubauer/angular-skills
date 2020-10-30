@@ -1,3 +1,78 @@
 .example-card {
-    max-width: 400px;
-  }
+  display: inline-table;
+  table-layout: center;
+  max-width: 400px;
+  font-weight: bold;
+  background: transparent;
+  text-decoration-color: white;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+mat-card {
+  animation: fade-in 1s both;
+  animation-delay: calc(1s  * var(--i));
+}
+
+mat-card-header{
+  justify-content: center;
+  font-family: 'Merriweather Sans', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+p {
+  text-align: left;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+mat-card-actions{
+  display: flex;
+  padding: 0px 60px;
+  justify-content: space-around;
+}
+
+button {
+  border-radius: 10px;
+  min-width: 80px;
+}
+
+button:hover{
+  border: 1px solid black;
+}
+
+button:active p{
+  animation: fade-in 1s;
+}
+
+button:first-child {
+  background: url(https://www.flaticon.com/svg/static/icons/svg/126/126473.svg);
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-color: white;
+  background-position-y: center;
+  max-height: 50px;
+}
+
+button + button {
+  background: url(https://joehertvik.com/wp-content/uploads/2014/01/linkedin-share-button.jpg);
+  background-size: 80px;
+  background-repeat: no-repeat;
+  background-color: white;
+  background-position-y: center;
+  max-height: 50px;
+}
+
+button p{
+  margin: 7px 0px;
+  font-size: 22px;
+  padding: 0px 0px 0px 30px;
+  display: flex;
+}
+
+button:hover {
+  opacity: 1;
+}

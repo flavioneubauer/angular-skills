@@ -1,4 +1,46 @@
+h3 {
+  padding: 20px 0px 40px 0px;
+  font-family: 'Carter One', cursive, sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+  letter-spacing: 9px;
+  text-align: center;
+  text-shadow: 9px 5px 20px black;
+  position: relative;
+  background: linear-gradient(to right, #317256, #52bf90, #317256);
+}
+
+h3 span{
+  position: relative;
+  display: inline-block;
+  animation: bounce-in-bck 1s both;
+  animation-delay: calc(0.2s * var(--i));
+}
+
+h3 span + span {
+  margin-left: 7px;
+}
+
 p {
   font-family: Lato;
 }
 
+#loading {
+  display: flex;
+  place-content: center;
+  transform: translateY(-40px);
+  overflow: visible;
+  font-family: 'Anton', sans-serif;
+  font-size: 30px;
+  letter-spacing: 7px;
+}
+
+#loading span{
+  animation: roll-in-left 5s ease-out both;
+  animation-delay: calc(0.1s * var(--i));
+}
+
+app-dashboard{
+  display: flex;
+  justify-content: space-evenly;
+}

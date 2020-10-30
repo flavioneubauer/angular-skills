@@ -1,2 +1,8 @@
 /* Add application styles & imports to this file! */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
