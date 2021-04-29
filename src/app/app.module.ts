@@ -1,5 +1,5 @@
 import { HttpClientModule } from '@angular/common/http';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule, MatCardModule, MatChipsModule } from '@angular/material';
 import { BrowserModule } from '@angular/platform-browser';
@@ -10,12 +10,31 @@ import { CardComponent } from './dashboard/card/card.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FakeApiService } from './fake-api.service';
 import { HelloComponent } from './hello.component';
-
+import { NgxSpinnerModule, NgxSpinnerService } from 'ngx-spinner';
 
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, BrowserAnimationsModule, MatButtonModule, MatChipsModule, MatCardModule, HttpClientModule, InMemoryWebApiModule.forRoot(FakeApiService, {delay: 5000}) ],
-  declarations: [ AppComponent, HelloComponent, DashboardComponent, CardComponent ],
-  bootstrap:    [ AppComponent ]
+  imports: [ 
+    BrowserModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatChipsModule,
+    MatCardModule,
+    HttpClientModule,
+    InMemoryWebApiModule.forRoot(FakeApiService, {delay: 5000}),
+    NgxSpinnerModule
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  declarations: [
+    AppComponent,
+    HelloComponent,
+    DashboardComponent,
+    CardComponent
+  ],
+  providers: [NgxSpinnerService],
+  bootstrap: [
+    AppComponent
+  ]
 })
 export class AppModule { }

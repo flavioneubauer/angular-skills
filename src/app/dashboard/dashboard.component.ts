@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { NgxSpinnerService } from 'ngx-spinner';
+import { Skill } from './interfaces/Skill.model';
+import { DashboardService } from './dashboard.service';
+
 
 @Component({
   selector: 'app-dashboard',
@@ -8,12 +11,19 @@ import { HttpClient } from '@angular/common/http';
 })
 export class DashboardComponent implements OnInit {
 
-  cards: Array<any>;
+  cards: Array<Skill>;
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(
+    private dashboardService: DashboardService,
+    private loaderService: NgxSpinnerService) { }
 
-  ngOnInit() {
-    this.httpClient.get('/api/skills').subscribe((ret: Array<any>) => this.cards = ret);
+  async ngOnInit(): Promise<void> {
+    this.loaderService.show();
+
+    this.cards = await this.dashboardService.getSkills() as Array<Skill>;
+    console.log('get cards ', this.cards)
+
+    this.loaderService.hide();
   }
 
 }

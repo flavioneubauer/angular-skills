@@ -1,4 +1,29 @@
-p {
-  font-family: Lato;
+h3 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 1rem 0;
 }
+
+app-dashboard {
+  display: grid;
+  gap: 1rem 1rem;
+  grid-template-columns: repeat(3, 1fr);
+
+  margin: 2rem;
+}
+
+/* MD size */
+@media screen and (min-width: 960px) and (max-width: 1279px) {
+  app-dashboard {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* SM size */
+@media screen and (max-width: 959px) {
+  app-dashboard {
+    grid-template-columns: 1fr;
+  }
+}
+
 
