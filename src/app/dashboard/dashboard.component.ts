@@ -11,19 +11,19 @@ import { DashboardService } from './dashboard.service';
 })
 export class DashboardComponent implements OnInit {
 
-  cards: Array<Skill>;
+  cards: Skill[];
 
   constructor(
     private dashboardService: DashboardService,
-    private loaderService: NgxSpinnerService) { }
+    private loaderService: NgxSpinnerService) {
+      this.cards = [];
+    }
 
   async ngOnInit(): Promise<void> {
-    this.loaderService.show();
+    this.loaderService.show(); // spinner indicando que a pagina esta carregando
 
-    this.cards = await this.dashboardService.getSkills() as Array<Skill>;
-    console.log('get cards ', this.cards)
-
-    this.loaderService.hide();
+    this.cards = await this.dashboardService.getSkills() as Skill[];
+    this.loaderService.hide(); // depois dos dados serem carregados, o spinner some
   }
 
 }

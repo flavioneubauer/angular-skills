@@ -11,6 +11,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { FakeApiService } from './fake-api.service';
 import { HelloComponent } from './hello.component';
 import { NgxSpinnerModule, NgxSpinnerService } from 'ngx-spinner';
+import { NgsRevealModule } from 'ngx-scrollreveal';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { NgxSpinnerModule, NgxSpinnerService } from 'ngx-spinner';
     MatCardModule,
     HttpClientModule,
     InMemoryWebApiModule.forRoot(FakeApiService, {delay: 5000}),
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    NgsRevealModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   declarations: [

@@ -1,3 +1,4 @@
+/* Skill card */
 .example-card {
   max-width: 400px;
   margin: auto;
@@ -7,4 +8,73 @@
 
 .example-card img {
   max-height: 250px;
+}
+
+.mat-card-content {
+  display: block;
+  margin: 1rem 0;
+  height: 5rem;
+}
+
+mat-card-actions button {
+  transition: all 0.5s;
+}
+
+mat-card-actions button:hover {
+  background-color: rgba(38,50,56, 0.7);
+  color: white;
+}
+
+mat-card-actions > button:nth-of-type(2) {
+  margin-left: 10px;
+}
+
+/* Likes igual a 5 */
+.five {
+  background-color: blue;
+  color: white;
+}
+
+/* Likes maior que 10 */
+.gt-ten {
+  background-color: seagreen;
+  color: white;
+}
+
+/* Spinner do like */
+.container {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 auto;
+  margin-left: -0.5rem;
+}
+
+.spinner {
+  animation: spinner 1s linear infinite;
+  border: solid 0.5rem #4DB6AC;
+  border-right: solid 0.5rem transparent;
+  border-left: solid 0.5rem transparent;
+  border-radius: 100%;
+  width: 0;
+  height: 0;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(60deg)
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* SM size */
+@media screen and (max-width: 959px) {
+  .mat-card-content {
+    height: 8rem;
+  }
 }
