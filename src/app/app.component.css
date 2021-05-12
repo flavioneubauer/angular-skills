@@ -2,3 +2,19 @@ p {
   font-family: Lato;
 }
 
+.format-text{
+  font-family: Verdana;
+  color: #dfeff7;
+  margin-bottom: 3.6rem;
+  margin-top: 3.6rem;
+  text-align: center;
+  line-height:200px;
+}
+
+.banner{
+  height: 200px;
+  opacity: 80%;
+  /*background-color: #1ff2f2e0;*/
+  background-image: url(https://t3.ftcdn.net/jpg/02/68/48/86/360_F_268488616_wcoB2JnGbOD2u3bpn2GPmu0KJQ4Ah66T.jpg);
+  
+}
