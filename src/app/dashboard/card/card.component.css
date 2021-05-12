@@ -1,3 +1,31 @@
 .example-card {
-    max-width: 400px;
+    /* max-width: 400px; */
+    margin: 10px;
+    min-height: 500px;
+  
   }
+
+.example-card:hover {
+   box-shadow: 0px 8px 13px rgba(0, 0, 0, 0.15);
+}
+
+  .img-card {
+      max-width: 90%; 
+  }
+
+  .align-img {
+    text-align: center;
+  }
+  
+  .format-txt{
+    text-align: justify;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+ 
+  }
+
+  .format-title{
+    display: 0;
+    margin-bottom: 1.6rem;
+    
+  }
+  
