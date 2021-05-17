@@ -1,4 +1,8 @@
-<article>
+<article
+  [class.content]="deviceXs"
+  [class.content-mob]="deviceXs"
+  (scroll)="onScroll($event)"
+>
   <mat-drawer-container class="example-container">
     <mat-drawer-content>
       <div

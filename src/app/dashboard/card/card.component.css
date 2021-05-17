@@ -1,16 +1,29 @@
+.content {
+  position: absolute;
+  top: 65px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  overflow-y: scroll;
+}
+
+.content-mob {
+  position: absolute;
+  top: 113px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  overflow-y: scroll;
+}
+
 .example-card {
   max-width: 320px;
   margin: 0px 5px 5px 0px;
 }
 
-/* .example-header-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-    background-size: cover;
-  } */
-
-mat-drawer {
-  position: fixed;
-  background-color: rgb(236, 236, 236);
+.example-header-image {
+  background-image: url('https://avatars.githubusercontent.com/u/33555544?v=4');
+  background-size: cover;
 }
 
 .example-sidenav-content:first-child {
