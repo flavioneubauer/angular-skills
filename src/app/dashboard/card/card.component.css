@@ -1,3 +1,18 @@
 .example-card {
-    max-width: 400px;
-  }
+  max-width: 320px;
+  margin: 0px 5px 5px 0px;
+}
+
+/* .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  } */
+
+mat-drawer {
+  position: fixed;
+  background-color: rgb(236, 236, 236);
+}
+
+.example-sidenav-content:first-child {
+  margin: 10px 5px 5px 5px;
+}
