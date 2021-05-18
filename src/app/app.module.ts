@@ -19,6 +19,7 @@ import { HeaderComponent } from './header/header.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 @NgModule({
   imports: [
@@ -29,6 +30,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     MatChipsModule,
     MatCardModule,
     MatIconModule,
+    MatProgressSpinnerModule,
     MatSidenavModule,
     HttpClientModule,
     FlexLayoutModule,

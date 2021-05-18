@@ -24,7 +24,13 @@
             </p>
           </mat-card-content>
           <mat-card-actions>
-            <button mat-button>LIKE {{ card.likes }}</button>
+            <button
+              mat-button
+              (click)="onLike(card)"
+              [style.color]="colorOfLikes"
+            >
+              LIKE {{ card.likes }}
+            </button>
             <button mat-button (click)="onShare()">SHARE</button>
           </mat-card-actions>
         </mat-card>
