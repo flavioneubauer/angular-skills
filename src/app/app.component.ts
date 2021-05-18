@@ -9,7 +9,6 @@ import { Subscription } from 'rxjs';
 })
 export class AppComponent implements OnInit, OnDestroy {
   name = 'Angular';
-  title = 'flex-tutorial';
   mediaSub: Subscription;
   deviceXs: boolean;
 
