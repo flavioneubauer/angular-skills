@@ -1,0 +1,26 @@
+<mat-toolbar color="primary" class="sticky">
+  <mat-toolbar-row fxLayoutAlign="space-between center">
+    <div fxLayout="row">
+      <button mat-button>
+        <mat-icon>home</mat-icon>
+        <span class="logo"> </span>
+      </button>
+      <div *ngIf="!deviceXs" fxLayout="row">
+        <button mat-button>Home</button>
+        <button mat-button (click)="onAbout()">About us</button>
+        <button mat-button (click)="onContact()">Contact us</button>
+      </div>
+    </div>
+    <div>
+      <button *ngIf="deviceXs" mat-icon-button>
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <button *ngIf="!deviceXs" mat-button fxLayoutAlign="end">Menu</button>
+    </div>
+  </mat-toolbar-row>
+  <mat-toolbar-row *ngIf="deviceXs" fxLayoutAlign="space-between end">
+    <button mat-button>Home</button>
+    <button mat-button>About us</button>
+    <button mat-button>Contact us</button>
+  </mat-toolbar-row>
+</mat-toolbar>

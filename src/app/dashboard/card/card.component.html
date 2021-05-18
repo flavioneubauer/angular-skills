@@ -1,15 +1,44 @@
-<mat-card class="example-card">
-  <mat-card-header>
-    <mat-card-title>{{card.name}}</mat-card-title>
-  </mat-card-header>
-  <img mat-card-image [src]="card.pic" alt="Photo of a Shiba Inu">
-  <mat-card-content>
-    <p>
-      {{card.description}}
-    </p>
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-button>LIKE {{card.likes}}</button>
-    <button mat-button>SHARE</button>
-  </mat-card-actions>
-</mat-card>
+<article
+  [class.content]="deviceXs"
+  [class.content-mob]="deviceXs"
+  (scroll)="onScroll($event)"
+>
+  <mat-drawer-container class="example-container">
+    <mat-drawer-content>
+      <div
+        class="example-sidenav-content"
+        fxLayout="row wrap"
+        fxLayout.xs="column"
+        fxLayoutAlign="start space-between"
+      >
+        <mat-card class="example-card">
+          <mat-card-header>
+            <div
+              mat-card-avatar
+              class="example-header-image"
+              fxLayoutAlign.xs="center center"
+            ></div>
+            <mat-card-title>{{ card.name }}</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image [src]="card.pic" alt="Photo of a Shiba Inu" />
+
+          <mat-card-content>
+            <p>
+              {{ card.description }}
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button
+              mat-button
+              (click)="onLike(card)"
+              [style.color]="colorOfLikes"
+            >
+              LIKE {{ card.likes }}
+            </button>
+            <button mat-button (click)="onShare()">SHARE</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </mat-drawer-content>
+  </mat-drawer-container>
+</article>

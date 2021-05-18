@@ -1,2 +1,9 @@
 <!--TODO: melhorar o layout dos cards para exibir ao menos 2 por linha em telas > md, e pequenas (sm) 1 -->
-<app-card [card]="card" *ngFor="let card of cards"></app-card>
+
+<div
+  class="example-sidenav-content"
+  fxLayout="row wrap"
+  fxLayoutAlign="space-around center"
+>
+  <app-card [card]="card" *ngFor="let card of cards"></app-card>
+</div>
