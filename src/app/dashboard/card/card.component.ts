@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
+import { SkillServices } from 'src/app/services/skill.services';
 
 @Component({
   selector: 'app-card',
@@ -9,7 +10,7 @@ import { DOCUMENT } from '@angular/common';
 export class CardComponent implements OnInit {
   @Input() card;
 
-  constructor(@Inject(DOCUMENT) private document: Document) {}
+  constructor(@Inject(DOCUMENT) private document: Document, private skillService: SkillServices) {}
 
   @Input() deviceXs: boolean;
   topVal = 0;
@@ -28,13 +29,28 @@ export class CardComponent implements OnInit {
 
   ngOnInit() {}
 
-  onLike(card: any) {
+  onLike(skill: any) {
     // TODO: incrementar o like, salvar via rest
+
+    skill.likes++
+    this.skillService.updateSkill(skill)
+    
+  }
+
+  get colorOfLikes(){
+    if(this.card.likes>=5 && this.card.likes<=10){
+      return 'blue'
+    }
+    if(this.card.likes > 10){
+      return 'green'
+    }
+
+    return 'pink'
+
   }
 
   onShare(card: any) {
     // TODO: abrir o link do seu linkedin
-    this.document.location.href =
-      'https://www.linkedin.com/in/jefferson-coelho/';
+    window.open('https://www.linkedin.com/in/jefferson-coelho/', '_blank')
   }
 }
