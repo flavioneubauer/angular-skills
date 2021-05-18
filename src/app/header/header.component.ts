@@ -9,7 +9,6 @@ export class HeaderComponent {
   @Input() deviceXs: boolean;
 
   onAbout() {
-    // TODO: abrir o link do seu linkedin
     window.open('https://github.com/BioJJ/', '_blank')
   }
 

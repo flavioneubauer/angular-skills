@@ -30,11 +30,11 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     MatChipsModule,
     MatCardModule,
     MatIconModule,
-    MatProgressSpinnerModule,
     MatSidenavModule,
     HttpClientModule,
     FlexLayoutModule,
     MatToolbarModule,
+    MatProgressSpinnerModule,
     InMemoryWebApiModule.forRoot(FakeApiService, { delay: 5000 }),
   ],
   declarations: [
