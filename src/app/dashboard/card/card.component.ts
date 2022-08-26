@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, Input } from '@angular/core';
+import { ApiService } from 'src/app/api.service';
 
 @Component({
   selector: 'app-card',
@@ -8,13 +10,19 @@ import { Component, OnInit, Input } from '@angular/core';
 export class CardComponent implements OnInit {
 
   @Input() card;
-  constructor() { }
+  likes: any;
+  cards: Array<any>;
+  constructor(private httpClient: HttpClient,
+    private apiService:ApiService) { }
 
   ngOnInit() {
   }
 
   onLike(card: any){
-    // TODO: incrementar o like, salvar via rest
+    console.log(card)
+    card.likes++;
+    this.apiService.editLikes(card).subscribe(response=>{
+    })
   }
 
   onShare(card: any){
