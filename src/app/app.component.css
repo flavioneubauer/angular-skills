@@ -1,4 +1,54 @@
 p {
   font-family: Lato;
 }
+@media (max-width: 1919px) and (min-width: 1280px)
+{
+  .appDash{
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 15px;
+  }
+}
+@media (max-width: 1279px) and (min-width: 960px)
+{
+  .appDash{
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr 1fr;
+    padding: 15px;
+  }
+}
+@media (max-width: 959px)
+{
+  .appDash{
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr ;
+    padding: 15px;
+  }
+}
+
+.loader {
+  border: 16px solid #225b81;
+  border-radius: 50%;
+  border-top: 16px solid #f3f3f3;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
 
