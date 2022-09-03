@@ -1,12 +1,16 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
+import { Card } from 'src/shared/models/card';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class FakeApiService implements InMemoryDbService {
 
-  constructor() { }
+  url = '/api/skills'
+  constructor(private httpClient: HttpClient) { }
 
   createDb() {
 
@@ -21,4 +25,17 @@ export class FakeApiService implements InMemoryDbService {
 
     return { skills };
   }
-}
+
+  updateLikes(card: Card){
+    let newCard = {
+      id: card.id,
+      name: card.name,
+      description: card.description,
+      pic: card.pic,
+      likes: card.likes
+    }
+    
+    return this.httpClient.put(this.url +'/'+ card.id , newCard)
+  }
+
+ }
