@@ -1,3 +1,18 @@
 .example-card {
-    max-width: 400px;
-  }
+  max-width: 90%;
+  width: 90%;
+  height: 450px;
+  max-height: 450px;
+  margin: 10px;
+  box-shadow: 5px 5px #333;
+}
+img{
+  max-width: 250px;
+  width: 250px;
+}
+p{
+  font-size: 1rem;
+  line-height: 1.4rem;
+  text-align: justify;
+  text-indent: 1.5rem;
+}

@@ -1,5 +1,5 @@
-<h3>
+<h1 style="text-align: center; text-transform: uppercase; color: #fff;">
   My Skills
-</h3>
-
-<app-dashboard></app-dashboard>
+</h1>
+<mat-progress-spinner  class="spinner" *ngIf="!cards" mode="indeterminate" color="warn"></mat-progress-spinner>
+<app-dashboard class="dash"></app-dashboard>

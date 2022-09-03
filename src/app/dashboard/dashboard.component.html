@@ -1,2 +1,11 @@
-<!--TODO: melhorar o layout dos cards para exibir ao menos 2 por linha em telas > md, e pequenas (sm) 1 -->
-<app-card [card]="card" *ngFor="let card of cards"></app-card>
+<div class="container">
+    <div fxLayout="row wrap" fxLayoutAlign="space-evenly center">
+      <ng-container *ngFor="let card of cards">
+        <app-card [card]="card"
+        fxFlex="0 1 calc(33.3% - 50px)"
+        fxFlex.lt-md="0 1 calc(50% - 11px)"
+        fxFlex.lt-sm="100%"
+        ></app-card>
+      </ng-container>
+    </div>
+  </div>

@@ -1,4 +1,4 @@
-<mat-card class="example-card">
+<mat-card class="example-card" fxLayout="column" fxLayoutAlign="space-between center">
   <mat-card-header>
     <mat-card-title>{{card.name}}</mat-card-title>
   </mat-card-header>
@@ -9,7 +9,22 @@
     </p>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-button>LIKE {{card.likes}}</button>
-    <button mat-button>SHARE</button>
+    <button mat-button *ngIf="card.likes < 5 && card.likes >= 0" (click)="onLike(card)">
+      <mat-icon color='warn'>thumb_up</mat-icon>
+      <span [matBadge]="card.likes" matBadgeColor="warn" matBadgeOverlap="false"></span>
+    </button>
+    <button mat-button *ngIf="card.likes >= 5 && card.likes <= 10" (click)="onLike(card)">
+      <mat-icon color='primary'>thumb_up</mat-icon>
+      <span [matBadge]="card.likes" matBadgeColor="primary" matBadgeOverlap="false"></span>
+    </button>
+    <button mat-button *ngIf="card.likes > 10" (click)="onLike(card)">
+      <mat-icon color='accent'>thumb_up</mat-icon>
+      <span [matBadge]="card.likes" matBadgeColor="accent" matBadgeOverlap="false"></span>
+    </button>
+    <button mat-button>
+      <a href="https://www.linkedin.com/in/tiago-aragao-costa-469027193/" target="_blank">
+        <mat-icon color='primary'>card_membership</mat-icon>
+      </a>
+    </button>
   </mat-card-actions>
 </mat-card>
