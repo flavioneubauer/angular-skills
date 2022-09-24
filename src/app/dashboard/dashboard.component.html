@@ -1,17 +1,18 @@
 <!--TODO: melhorar o layout dos cards para exibir ao menos 2 por linha em telas > md, e pequenas (sm) 1 -->
-<div fxLayout="row wrap" fxLayoutGap="32px" fxLayoutAlign="flex-start" *ngIf="!loading">
+<div fxLayout="row wrap" fxLayoutGap="32px" fxLayoutAlign="flex-start" *ngIf="!loading" style=" align-items: center;
+justify-content: center;">
     <ng-container *ngFor="let card of cards" >
         <app-card 
         fxFlex="0 1 calc(33.3% - 32px)"
         fxFlex.lt-md="0 1 calc(50% - 32px)"
         fxFlex.lt-sm="100%"
-        [card]="card"></app-card>
+        [card]="card" style="align-self: center;"></app-card>
       </ng-container>
 </div>
 
 <div *ngIf="loading">
   <div style="display: flex; align-items: center; justify-content: center; height: 50vh; flex-direction: column;" role="status">
     <mat-spinner diameter="30"></mat-spinner>
-    <p  [style.color]="'#fff'" [style.marginTop]="'1rem'">Carregando infomações ...</p>
+    <p  [style.color]="'#fff'" [style.marginTop]="'1rem'">Carregando infomações...</p>
     </div>
 </div>

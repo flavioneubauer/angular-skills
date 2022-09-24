@@ -19,14 +19,7 @@ export class CardComponent implements OnInit {
   onLike(card: any){
     card.likes += 1 
     // TODO: incrementar o like, salvar via rest
-    this.httpClient.put(`/api/skills/${card.id}`, card).subscribe({
-      next: (response) => {
-        console.log(response)
-      },
-      error(err) {
-          console.log(err)
-      },
-    });
+    this.httpClient.put(`/api/skills/${card.id}`, card).subscribe();
   }
 
   onShare(){
