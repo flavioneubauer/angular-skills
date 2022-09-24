@@ -8,6 +8,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CardComponent implements OnInit {
 
+  color: string = 'white';
+
   @Input() card;
   constructor(private httpClient: HttpClient) { }
 

@@ -1,13 +1,11 @@
 .example-card {
     max-width: 400px;
     height: 24rem;
-    /* display: flex; */
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
+    border-radius: 1rem;
     margin: 1rem 0;
-    background-color: #353535;
-    box-shadow:  0 .0rem 1.5rem rgba(0, 0, 0, .1);
+    background-color: #0a1128;
+    /* box-shadow:  1rem .0rem 1.5rem rgba(0, 0, 0, .1); */
+    box-shadow: rgba(49, 49, 49, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     transition: 0.5s ease-in-out;
     color: #ffff;
 }
@@ -19,12 +17,12 @@
 } */
 
 .blue-likes{
-  background-color: rgb(108, 108, 226);
+  background-color: rgb(108, 108, 226) !important;
   color:#fff
 }
 
 .green-likes{
-  background-color:rgb(10, 85, 10);
+  background-color:rgb(10, 85, 10) !important;
   color:#fff
 }
 
@@ -40,7 +38,8 @@ mat-card img{
 }
 
 .header{
-  border-bottom: 2px solid #ccc
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 1rem;
 }
 
 .header p{
