@@ -1,3 +1,18 @@
 .example-card {
-    max-width: 400px;
-  }
+  width: 400px;
+  min-height: 420px;
+
+  transition: .2s;
+}
+
+.example-card:hover {
+  transform: scale(1.05);
+  background: #fffcee;
+  border-radius: 16px;
+  box-shadow: .1px .1px 20px #00000047;
+}
+
+.example-card img {
+  object-fit: cover;
+  max-height: 200px;
+}

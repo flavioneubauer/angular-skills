@@ -1,4 +1,10 @@
-p {
+h3 {
+  padding: 16px 0;
+  width: 100%;
   font-family: Lato;
-}
+  font-size: 32px;
+  color: #0288d1;
+  text-align: center;
 
+  background: #fafafab8;
+}
