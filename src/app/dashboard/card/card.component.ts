@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: "app-card",
@@ -21,13 +21,11 @@ export class CardComponent implements OnInit {
 
   ngOnInit() {}
 
-  private apiUrl = "http://localhost:3000/api/counter";
-
   constructor(private http: HttpClient) {}
 
   @Output() loadingChange: EventEmitter<boolean> = new EventEmitter<boolean>();
 
-  onLike(card: number) {
+  onLike(card: any) {
     // TODO: incrementar o like, salvar via rest
     this.likes++;
     console.log(this.likes);
@@ -42,13 +40,18 @@ export class CardComponent implements OnInit {
       this.buttonRedTenLimit = true;
     }
 
-    this.http
-      .post<any>(this.apiUrl, { value: this.likes })
-      .subscribe((data: string) => {
+    this.http.post<any>("api/counter", { value: this.likes }).subscribe(
+      (data: string) => {
         console.log("Adicionado " + JSON.stringify(data));
         this.isLoading = false;
         this.loadingChange.emit(false);
-      });
+      },
+      (error: HttpErrorResponse) => {
+        console.error("Error!! Valor não salvo!");
+        this.isLoading = false;
+        this.loadingChange.emit(false);
+      }
+    ); 
   }
 
   onShare(card: any) {

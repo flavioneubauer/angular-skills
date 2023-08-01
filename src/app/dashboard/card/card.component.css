@@ -1,5 +1,6 @@
 .example-card {
   max-width: 23rem;
+  height: 32rem;
   margin: 0 auto;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -19,7 +20,7 @@
 }
 
 img {
-  width: 300px;
+  width: 330px;
   margin: 0 auto;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -39,7 +40,7 @@ img {
 }
 
 button {
-  background-color: #000022;
+  background-color: #5E2BFF;
   color: #FBF5F3;
 }
 
