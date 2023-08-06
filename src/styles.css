@@ -1,2 +1,25 @@
 /* Add application styles & imports to this file! */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  ;
+}
+
+:root {
+  --bg-color-dark-gray: #303030;
+  --bg-color-deep-blue: #0D47A1;
+}
+
+body {
+  background-color: var(--bg-color-dark-gray);
+}
+
+footer {
+  background-color: var(--bg-color-deep-blue);
+}

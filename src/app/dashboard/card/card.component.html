@@ -1,6 +1,6 @@
-<mat-card class="example-card">
-  <mat-card-header>
-    <mat-card-title>{{card.name}}</mat-card-title>
+<mat-card fxFlex="auto" fxFlex.gt.lg='50%' class="custom-card">
+  <mat-card-header class="custom-card-header">
+    <mat-card-title class="custom-title">{{card.name}}</mat-card-title>
   </mat-card-header>
   <img mat-card-image [src]="card.pic" alt="Photo of a Shiba Inu">
   <mat-card-content>
@@ -9,7 +9,16 @@
     </p>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-button>LIKE {{card.likes}}</button>
-    <button mat-button>SHARE</button>
+    <button mat-button (click)="onLike(card)" [disabled]="isUpdatingLikes">
+      <mat-icon [@heartbeat]="isLiked ? 'liked' : 'normal'" [ngClass]="getLikeButtonClass(card.likes)" class="custon-icon-heart">favorite</mat-icon>
+      Like {{card.likes}}
+      <div class="modal" *ngIf="isUpdatingLikes">
+        <mat-spinner diameter="20"></mat-spinner>
+      </div>
+    </button>
+    <button mat-button (click)="onShare(card)">
+      <mat-icon>share_alt</mat-icon>
+      Share
+    </button>
   </mat-card-actions>
 </mat-card>
