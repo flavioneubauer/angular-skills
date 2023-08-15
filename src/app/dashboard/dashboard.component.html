@@ -1,2 +1,20 @@
 <!--TODO: melhorar o layout dos cards para exibir ao menos 2 por linha em telas > md, e pequenas (sm) 1 -->
-<app-card [card]="card" *ngFor="let card of cards"></app-card>
+<ng-container *ngIf="isLoading; else blockUi">
+  <div
+    gdColumns.xs="1fr"
+    gdColumns.sm="1fr"
+    gdColumns.md="1fr 1fr"
+    gdColumns.lg="1fr 1fr 1fr"
+    gdColumns.xl="1fr 1fr 1fr"
+    gdGap="100px 50px"
+    gdAlignRows="center center"
+    class="container-dashboard"
+  >
+    <app-card [card]="card" *ngFor="let card of cards"></app-card>
+  </div>
+</ng-container>
+<ng-template #blockUi>
+  <div fxLayoutAlign="center center" style="height: 100vh">
+    <mat-spinner></mat-spinner>
+  </div>
+</ng-template>

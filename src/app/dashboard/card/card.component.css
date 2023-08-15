@@ -1,3 +1,125 @@
+
+
 .example-card {
-    max-width: 400px;
+  max-width: 350px;
+}
+
+img {
+  height: 100%;
+}
+
+.bg-blue {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.bg-blue .btn-action:hover {
+  background-color: var(--against-secondary-color);  
+}
+
+.bg-purple {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.bg-purple .btn-action:hover {
+  background-color: var(--against-primary-color);  
+}
+
+.btn-action:hover {
+  background-color: var(--against-main-bg-color);
+}
+
+mat-card:hover {
+  animation-name: zoom;
+  -webkit-animation-name: zoom;
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  animation-timing-function: ease;
+  -webkit-animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+
+mat-card {
+  animation-name: back-zoom;
+  -webkit-animation-name: back-zoom;
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  animation-timing-function: ease;
+  -webkit-animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+
+.animation-like-active {
+  animation-name: animation-liked;
+  animation-iteration-count: initial;
+  animation-duration: 500ms;
+}
+
+.animation-favorite-active {
+    animation-name: zoom-favorite;
+    -webkit-animation-name: zoom-favorite;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-duration: 1s;
+    animation-timing-function: ease;
+    -webkit-animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
   }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes zoom-favorite {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.4);
+  }
+}
+
+@keyframes back-zoom {
+  0% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes animation-liked {
+  0% {
+    transform: rotate(0);
+  }
+
+  25% {
+    transform: rotate(-50deg);
+  }
+
+  50% {
+    transform: rotate(50deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@media (max-width: 511px) {
+  mat-card:hover {
+    animation: none;
+  }  
+  mat-card {
+    animation: none;
+  }
+}

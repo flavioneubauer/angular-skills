@@ -1,2 +1,19 @@
 /* Add application styles & imports to this file! */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import url('https://fonts.googleapis.com/css2?family=Shojumaru&display=swap');
+
+:root {
+    --primary-color: rgb(16, 16, 133);
+    --against-primary-color: rgb(53, 53, 177);
+    --secondary-color: rgb(146, 17, 146);
+    --against-secondary-color: rgb(179, 41, 179);
+    --against-main-bg-color: rgb(134, 154, 190);
+}
+
+body {
+    background: cornflowerblue;
+}
+
+.msg-success  {
+    background-color: rgb(24, 24, 54);
+}
