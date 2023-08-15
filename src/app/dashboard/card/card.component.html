@@ -1,15 +1,38 @@
-<mat-card class="example-card">
-  <mat-card-header>
-    <mat-card-title>{{card.name}}</mat-card-title>
+<mat-card
+  class="example-card"
+  [ngClass]="{ 'bg-blue': card.likes >= 5, 'bg-purple': card.likes >= 10 }"
+>
+  <mat-card-header fxLayoutAlign="center">
+    <mat-card-title>{{ card.name }}</mat-card-title>
   </mat-card-header>
-  <img mat-card-image [src]="card.pic" alt="Photo of a Shiba Inu">
+  <img mat-card-image [src]="card.pic" alt="Photo of a Shiba Inu" />
   <mat-card-content>
     <p>
-      {{card.description}}
+      {{ card.description }}
     </p>
+    <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="20px 10px">
+      <mat-icon
+        class="iconHeart"
+        [ngClass]="{ 'animation-favorite-active': animation.favorite }"
+        >favorite</mat-icon
+      >
+      {{ card.likes }}
+    </div>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-button>LIKE {{card.likes}}</button>
-    <button mat-button>SHARE</button>
+    <button
+      mat-button
+      class="btn-action btn-like"
+      [ngClass]="{ 'animation-like-active': animation.like }"
+      (click)="onLike(card)"
+    >
+      <mat-icon>thumb_up</mat-icon>
+    </button>
+    <button mat-button class="btn-action btn-like" (click)="onDislike(card)">
+      <mat-icon>thumb_down</mat-icon>
+    </button>
+    <button mat-button class="btn-action" (click)="onShare()">
+      <mat-icon>share</mat-icon>
+    </button>
   </mat-card-actions>
 </mat-card>
