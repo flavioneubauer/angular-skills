@@ -1,5 +1,23 @@
-<h3>
-  My Skills
-</h3>
+<app-header></app-header>
 
-<app-dashboard></app-dashboard>
+<mat-card>
+  <div fxLayoutAlign="space-between">
+    <mat-card-title>Skills</mat-card-title>
+    <!-- <mat-card-title class="total-likes" fxLayoutAlign="end center">Total Likes:  <Strong> {{likes$ | async}}</Strong></mat-card-title> -->
+
+    <div class="demo-section" style="margin-bottom: 10px;">
+      <button mat-raised-button color="primary"
+          [matBadge]="likes$ | async" matBadgePosition="before" matBadgeColor="accent">
+          Total de Likes
+      </button>
+    </div>
+  </div>
+
+  <mat-card-content>
+    <app-dashboard></app-dashboard>
+  </mat-card-content>
+</mat-card>
+<app-footer></app-footer>
+
+
+<app-spinner></app-spinner>

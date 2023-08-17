@@ -1,3 +1,51 @@
 .example-card {
-    max-width: 400px;
+    max-width: 350px;
+    max-height: 510px;
+    margin-bottom: 10px;
+  }
+  .content-card mat-card-title{
+    font-size: 1.1em;
+    color: #9b9b9b;
+    font-weight: 600;
+  }
+
+.imgCard img{
+    aspect-ratio: 2/1.4;
+    object-fit: cover;
+  }
+  .content-card{
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  mat-card-actions{
+    display: flex;
+    justify-content: space-between;
+  }
+  mat-card-content{
+    font-weight: bold;
+    color: #1e1e1e;
+    font-size: 1em;
+  }
+  mat-card-content p{
+    font-weight: lighter;
+    font-size: 1.1em;
+  }
+  .card-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .btn-share{
+    background-color: rgb(40, 40, 40) !important;
+  }
+  .btn-like mat-icon{
+    color: #bababa !important;
+    transition:  1s;
+
+  }
+  .btn-like mat-icon:hover{
+    color: #ce0000 !important;
+    transition:  1s;
   }
