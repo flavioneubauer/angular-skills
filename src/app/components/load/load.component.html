@@ -1,0 +1,10 @@
+<div class="load-container" *ngIf="!component">
+  <ng-lottie [options]="options" containerClass="load"></ng-lottie>
+  <div *ngIf="loadText" class="load-text load-t">
+    <p>{{loadText}}</p>
+  </div>
+</div>
+
+<div class="component-container" *ngIf="component">
+  <ng-lottie *ngIf="component" [options]="optionsComponent" containerClass="load Component"></ng-lottie> 
+</div>

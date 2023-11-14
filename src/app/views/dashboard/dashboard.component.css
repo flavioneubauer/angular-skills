@@ -1,0 +1,9 @@
+.container {
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+.container-card {
+    display: flex; flex-flow: wrap;
+    justify-content: center;
+}
