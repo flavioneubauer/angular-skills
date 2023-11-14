@@ -1,0 +1,26 @@
+.example-card {
+    max-width: 400px;
+  }
+
+  .card {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid #767676;
+    justify-content: center;
+    transition-duration: 0.1s;
+    transition-property: border-color;
+    transition-timing-function: cubic-bezier(0.6, 0, 0.2, 1);
+    align-items: center;
+    min-height: 500px;
+    text-transform: capitalize;
+    margin-left: 1rem;
+    padding: 0.2rem;
+    max-width: 400px;
+  }
+
+  .mat-card-image {
+    width: 350px !important;
+}
